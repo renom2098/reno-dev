@@ -1,0 +1,150 @@
+ERROR - 2023-03-08 07:45:45 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SHOW TABLES FRO...', 0)
+#1 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SHOW TABLES FRO...')
+#2 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW TABLES FRO...')
+#3 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1408): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1427): CodeIgniter\Database\BaseConnection->listTables()
+#5 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\Dev\codeigniter4\reno-dev\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-03-08 07:46:59 --> mysqli_sql_exception: Can't create database 'devci4'; database exists in D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE DATABASE...', 0)
+#1 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE DATABASE...')
+#2 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE DATABASE...')
+#3 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\Forge.php(230): CodeIgniter\Database\BaseConnection->query('CREATE DATABASE...')
+#4 D:\Dev\codeigniter4\reno-dev\app\Config\Routes.php(32): CodeIgniter\Database\Forge->createDatabase('devci4')
+#5 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(883): CodeIgniter\Router\RouteCollection->Config\{closure}()
+#6 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+#7 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Dev\codeigniter4\reno-dev\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Dev\\codeigni...')
+#10 {main}
+CRITICAL - 2023-03-08 07:46:59 --> Unable to create the specified database.
+in SYSTEMPATH\Database\Forge.php on line 247.
+ 1 APPPATH\Config\Routes.php(32): CodeIgniter\Database\Forge->createDatabase('devci4')
+ 2 SYSTEMPATH\CodeIgniter.php(883): CodeIgniter\Router\RouteCollection->Config\{closure}()
+ 3 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-08 07:47:01 --> mysqli_sql_exception: Can't create database 'devci4'; database exists in D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE DATABASE...', 0)
+#1 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE DATABASE...')
+#2 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE DATABASE...')
+#3 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\Forge.php(230): CodeIgniter\Database\BaseConnection->query('CREATE DATABASE...')
+#4 D:\Dev\codeigniter4\reno-dev\app\Config\Routes.php(32): CodeIgniter\Database\Forge->createDatabase('devci4')
+#5 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(883): CodeIgniter\Router\RouteCollection->Config\{closure}()
+#6 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+#7 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Dev\codeigniter4\reno-dev\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Dev\\codeigni...')
+#10 {main}
+CRITICAL - 2023-03-08 07:47:01 --> Unable to create the specified database.
+in SYSTEMPATH\Database\Forge.php on line 247.
+ 1 APPPATH\Config\Routes.php(32): CodeIgniter\Database\Forge->createDatabase('devci4')
+ 2 SYSTEMPATH\CodeIgniter.php(883): CodeIgniter\Router\RouteCollection->Config\{closure}()
+ 3 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-08 07:47:15 --> mysqli_sql_exception: Can't create database 'devci4'; database exists in D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE DATABASE...', 0)
+#1 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('CREATE DATABASE...')
+#2 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE DATABASE...')
+#3 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\Forge.php(230): CodeIgniter\Database\BaseConnection->query('CREATE DATABASE...')
+#4 D:\Dev\codeigniter4\reno-dev\app\Config\Routes.php(32): CodeIgniter\Database\Forge->createDatabase('devci4')
+#5 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(883): CodeIgniter\Router\RouteCollection->Config\{closure}()
+#6 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+#7 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Dev\codeigniter4\reno-dev\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Dev\\codeigni...')
+#10 {main}
+CRITICAL - 2023-03-08 07:47:15 --> Unable to create the specified database.
+in SYSTEMPATH\Database\Forge.php on line 247.
+ 1 APPPATH\Config\Routes.php(32): CodeIgniter\Database\Forge->createDatabase('devci4')
+ 2 SYSTEMPATH\CodeIgniter.php(883): CodeIgniter\Router\RouteCollection->Config\{closure}()
+ 3 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-08 07:51:10 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SHOW TABLES FRO...', 0)
+#1 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SHOW TABLES FRO...')
+#2 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW TABLES FRO...')
+#3 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1408): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1427): CodeIgniter\Database\BaseConnection->listTables()
+#5 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\Dev\codeigniter4\reno-dev\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-03-08 07:51:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SHOW TABLES FRO...', 0)
+#1 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SHOW TABLES FRO...')
+#2 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW TABLES FRO...')
+#3 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1408): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1427): CodeIgniter\Database\BaseConnection->listTables()
+#5 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\Dev\codeigniter4\reno-dev\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-03-08 07:58:25 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SHOW TABLES FRO...', 0)
+#1 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SHOW TABLES FRO...')
+#2 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW TABLES FRO...')
+#3 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1408): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1427): CodeIgniter\Database\BaseConnection->listTables()
+#5 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\Dev\codeigniter4\reno-dev\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-03-08 07:59:53 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SHOW TABLES FRO...', 0)
+#1 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SHOW TABLES FRO...')
+#2 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW TABLES FRO...')
+#3 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1408): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1427): CodeIgniter\Database\BaseConnection->listTables()
+#5 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\Dev\codeigniter4\reno-dev\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+ERROR - 2023-03-08 08:00:01 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SHOW TABLES FRO...', 0)
+#1 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SHOW TABLES FRO...')
+#2 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SHOW TABLES FRO...')
+#3 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1408): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1427): CodeIgniter\Database\BaseConnection->listTables()
+#5 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 D:\Dev\codeigniter4\reno-dev\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+CRITICAL - 2023-03-08 08:01:08 --> Cannot declare class App\Database\Migrations\Acara, because the name is already in use
+in APPPATH\Database\Migrations\2023-03-08-074428_Acara.php on line 7.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
