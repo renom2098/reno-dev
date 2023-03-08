@@ -6,7 +6,7 @@ class Acara extends BaseController
 {
     public function index()
     {
-        // ini acara
+        // ini acara update di rumah
         return view('acara/get');
     }
 }
