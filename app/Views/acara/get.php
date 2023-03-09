@@ -14,7 +14,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Acara</a></li>
+              <li class="breadcrumb-item">Acara</a></li>
               <li class="breadcrumb-item active">Acara</li>
             </ol>
           </div>
@@ -29,6 +29,9 @@
       <div class="card">
         <div class="card-header">
           <!-- <h1>Hello Acara!</h1> -->
+          <div>
+            <a href="<?= base_url('acara/add'); ?>" class="btn btn-primary">Tambah Data</a>
+          </div>
         </div>
         <div class="card-body">
         <table class="table table-bordered">

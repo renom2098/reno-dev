@@ -39,15 +39,27 @@
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        <a class="nav-link" data-widget="pushmenu" href="<?= base_url(); ?>" role="button"><i class="fas fa-bars"></i></a>
       </li>
     </ul>
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <button type="button" class="btn btn-block btn-danger">Log Out</button>
-      </li>
+      <!-- Notifications Dropdown Menu -->
+      <div class="container mb-3">
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
+            <img class="img-circle elevation-2" width="45px" src="<?= base_url(); ?>template/dist/img/avatar.png" alt="">
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="left: inherit; right: 0px;">
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-sign-out-alt mr-2"></i> Logout
+            </a>
+            <div class="dropdown-divider"></div>
+          </div>
+        </li>
+      </div>
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -78,6 +90,14 @@
     <?= $this->renderSection('content') ?>
   </div>
   <!-- /.content-wrapper -->
+
+  <footer class="main-footer">
+    <strong>Copyright © 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 3.2.0
+    </div>
+  </footer>
 
 <!-- jQuery -->
 <script src="<?= base_url(); ?>template/plugins/jquery/jquery.min.js"></script>
