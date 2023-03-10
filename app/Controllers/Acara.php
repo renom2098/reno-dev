@@ -28,9 +28,7 @@ class Acara extends BaseController
         // cara 1 : name sama
         $data = $this->request->getPost();
         $builder = $this->$db->table('acara')->insert($data);
-
-        if ($this->db->affectedRows() > 0) {
-            return redirect()->to(base_url('acara'));
-        }
+ 
+        return redirect()->route('acara');
     }
 }

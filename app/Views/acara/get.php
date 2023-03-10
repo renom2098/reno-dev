@@ -45,11 +45,12 @@
             </tr>
           </thead>
           <tbody>
+            <?php $no = 1; ?>
             <?php foreach ($acara as $ac => $value) : ?>
               <tr>
-                <td><?= $ac + 1 ?></td>
+                <td><?= $no++ ?></td>
                 <td><?= $value->name_acara; ?></td>
-                <td><?= $value->date_acara; ?></td>
+                <td><?= date('d/m/Y', strtotime($value->date_acara)); ?></td>
                 <td><?= $value->info_acara; ?></td>
                 <td class="text-center">
                   <a href="<?= $value->id_acara; ?>" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i></a>
