@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+
+
 class Acara extends BaseController
 {
     public function index()
@@ -11,7 +13,7 @@ class Acara extends BaseController
         $query = $builder->get();
 
         // cara 2 : menggunakan query biasa manual
-        // $query = $this->db->query("SELECT * FROM acara");
+        // $query = $this->$db->query("SELECT * FROM acara");
 
         $data['acara'] = $query->getResult();
 
@@ -27,8 +29,14 @@ class Acara extends BaseController
     {
         // cara 1 : name sama
         $data = $this->request->getPost();
-        $builder = $this->$db->table('acara')->insert($data);
- 
-        return redirect()->route('acara');
+        $this->$db->table('acara')->insert($data);
+
+        // cara 2 : name spesifik
+        $data = [
+            'name_acara' => $this->request->getVar('name_acara'),
+            'date_acara' => $this->request->getVar('date_acara'),
+            'info_acara' => $this->request->getVar('info_acara'),
+        ];
+        return redirect()->to(site_url('acara'))->with('success', 'data berhasil disimpan');
     }
 }
