@@ -35,8 +35,8 @@
         </div>
         <div class="card-body col-md-6">
             <form action="<?= site_url('acara'); ?>" method="post" autocomplete="off">
+            <?php echo csrf_field(); ?>
                 <div class="form-group">
-                  <?= csrf_filed() ?>
                     <label>Nama Acara*</label>
                     <input type="text" name="name_acara" class="form-control" require>
                 </div>
