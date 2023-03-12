@@ -2,12 +2,11 @@
 
 namespace App\Controllers;
 
-
-
 class Acara extends BaseController
 {
     public function __construct()
     {
+        // masih menjadi misteri apakah '$db' itu penting atau cukup hanya 'db'
         $this->$db = \Config\Database::connect();
     }
 
@@ -37,11 +36,43 @@ class Acara extends BaseController
         $this->$db->table('acara')->insert($data);
 
         // cara 2 : name spesifik
+        // $data = [
+        //     'name_acara' => $this->request->getVar('name_acara'),
+        //     'date_acara' => $this->request->getVar('date_acara'),
+        //     'info_acara' => $this->request->getVar('info_acara'),
+        // ];
+        return redirect()->to(site_url('acara'))->with('success', 'data berhasil disimpan');
+    }
+
+    public function edit($id = null)
+    {
+        if($id != null) {
+            $query = $this->$db->table('acara')->getWhere(['id_acara' => $id]);
+            if($query->resultID->num_rows > 0) {
+                $data['acara'] = $query->getRow();
+                return view('acara/edit', $data);
+            } else {
+                throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+            }
+        } else {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+        }
+    }
+
+    public function update($id)
+    {
+        // cara 1 jika name sama
+        // $data = $this->request->getPost();
+        // unset($data['_method']);
+
+        // cara 2 : name spesifik
         $data = [
             'name_acara' => $this->request->getVar('name_acara'),
             'date_acara' => $this->request->getVar('date_acara'),
             'info_acara' => $this->request->getVar('info_acara'),
         ];
-        return redirect()->to(site_url('acara'))->with('success', 'data berhasil disimpan');
+
+        $this->$db->table('acara')->where(['id_acara' => $id])->update($data);
+        return redirect()->to(site_url('acara'))->with('success', 'perubahan data berhasil disimpan');
     }
 }
