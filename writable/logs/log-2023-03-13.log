@@ -46,3 +46,44 @@ in APPPATH\Controllers\Acara.php on line 16.
  3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-13 15:00:10 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in E:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 E:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'devci4', 3306, '', 0)
+#1 E:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Dev\codeigniter4\reno-dev\app\Controllers\Acara.php(16): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Acara->index()
+#6 E:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#7 E:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\Dev\codeigniter4\reno-dev\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 E:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\Dev\\codeigni...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in E:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 E:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 E:\Dev\codeigniter4\reno-dev\app\Controllers\Acara.php(16): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Acara->index()
+#5 E:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+#6 E:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 E:\Dev\codeigniter4\reno-dev\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 E:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('E:\\Dev\\codeigni...')
+#9 {main}
+CRITICAL - 2023-03-13 15:00:10 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `acara`', [], false)
+ 3 APPPATH\Controllers\Acara.php(16): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Acara->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Acara))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

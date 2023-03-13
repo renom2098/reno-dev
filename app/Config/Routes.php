@@ -37,15 +37,20 @@ $routes->get('create-db', function() {
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
-//$routes->addRedirect('/', 'home');
-$routes->get('/', 'Home::index');
+// login
+$routes->get('login', 'Auth::login');
+$routes->post('loginProcess', 'Auth::loginProcess');
 
+// dashboard
+$routes->addRedirect('/', 'home');
+$routes->get('/home', 'Home::index');
 $routes->get('acara', 'Acara::index');
 $routes->get('acara/add', 'Acara::create');
 $routes->post('acara', 'Acara::store');
 $routes->get('acara/edit/(:num)', 'Acara::edit/$1');
 $routes->put('acara/(:any)', 'Acara::update/$1');
 $routes->delete('acara/(:segment)', 'Acara::destroy/$1');
+
 
 /*
  * --------------------------------------------------------------------
