@@ -36,6 +36,16 @@
       </div>
     <?php endif; ?>
 
+    <?php if(session()->getFlashdata('danger')) : ?>
+      <div class="alert alert-danger alert-dismissible show fade">
+        <div class="alert-body">
+          <button class="close" data-dismiss="alert">X</button>
+          <b>Danger!</b>
+          <?= session()->getFlashdata('danger') ?>
+        </div>
+      </div>
+    <?php endif; ?>
+
     <?php if(session()->getFlashdata('error')) : ?>
       <div class="alert alert-Danger alert-dismissible show fade">
         <div class="alert-body">
@@ -75,8 +85,14 @@
                 <td><?= date('d/m/Y', strtotime($value->date_acara)); ?></td>
                 <td><?= $value->info_acara; ?></td>
                 <td class="text-center">
-                  <a href="<?= base_url('acara/edit/'.$value->id_acara) ?>" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i></a>
-                  <a href="<?= base_url('acara/hapus/'.$value->id_acara) ?>" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
+                  <a href="<?= base_url('acara/edit/'.$value->id_acara); ?>" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i></a>
+                  <form action="<?= site_url('acara/'.$value->id_acara); ?>" method="post" class="d-inline" onsubmit="return confirm('yakin mau menghapus??')">
+                  <?php echo csrf_field(); ?>
+                  <input type="hidden" name="_method" value="DELETE">
+                    <button class="btn btn-danger btn-sm">
+                      <i class="fas fa-trash-alt"></i>
+                    </button>
+                  </form>
                 </td>
               </tr>
             <?php endforeach; ?>

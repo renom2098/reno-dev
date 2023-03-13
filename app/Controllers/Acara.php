@@ -6,18 +6,17 @@ class Acara extends BaseController
 {
     public function __construct()
     {
-        // masih menjadi misteri apakah '$db' itu penting atau cukup hanya 'db'
-        $this->$db = \Config\Database::connect();
+        $this->db = \Config\Database::connect();
     }
 
     public function index()
     {
         // cara 1 : menggunakan query builder
-        $builder = $this->$db->table('acara');
+        $builder = $this->db->table('acara');
         $query = $builder->get();
 
         // cara 2 : menggunakan query biasa manual
-        // $query = $this->$db->query("SELECT * FROM acara");
+        // $query = $this->db->query("SELECT * FROM acara");
 
         $data['acara'] = $query->getResult();
 
@@ -33,7 +32,7 @@ class Acara extends BaseController
     {
         // cara 1 : name sama
         $data = $this->request->getPost();
-        $this->$db->table('acara')->insert($data);
+        $this->db->table('acara')->insert($data);
 
         // cara 2 : name spesifik
         // $data = [
@@ -47,7 +46,7 @@ class Acara extends BaseController
     public function edit($id = null)
     {
         if($id != null) {
-            $query = $this->$db->table('acara')->getWhere(['id_acara' => $id]);
+            $query = $this->db->table('acara')->getWhere(['id_acara' => $id]);
             if($query->resultID->num_rows > 0) {
                 $data['acara'] = $query->getRow();
                 return view('acara/edit', $data);
@@ -72,7 +71,13 @@ class Acara extends BaseController
             'info_acara' => $this->request->getVar('info_acara'),
         ];
 
-        $this->$db->table('acara')->where(['id_acara' => $id])->update($data);
+        $this->db->table('acara')->where(['id_acara' => $id])->update($data);
         return redirect()->to(site_url('acara'))->with('success', 'perubahan data berhasil disimpan');
+    }
+
+    public function destroy($id)
+    {
+        $this->db->table('acara')->where(['id_acara' => $id])->delete();
+        return redirect()->to(site_url('acara'))->with('danger', 'data berhasil dihapus');
     }
 }
