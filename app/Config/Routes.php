@@ -52,6 +52,9 @@ $routes->get('acara/edit/(:num)', 'Acara::edit/$1');
 $routes->put('acara/(:any)', 'Acara::update/$1');
 $routes->delete('acara/(:segment)', 'Acara::destroy/$1');
 
+// groups contact
+$routes->presenter('groups');
+
 
 /*
  * --------------------------------------------------------------------
