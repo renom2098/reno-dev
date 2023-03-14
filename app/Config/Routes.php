@@ -40,6 +40,7 @@ $routes->get('create-db', function() {
 // login
 $routes->get('login', 'Auth::login');
 $routes->post('loginProcess', 'Auth::loginProcess');
+$routes->get('logout', 'Auth::logout');
 
 // dashboard
 $routes->addRedirect('/', 'home');
