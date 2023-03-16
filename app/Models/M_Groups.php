@@ -11,4 +11,5 @@ class M_Groups extends Model
     protected $returnType       = 'object';
     protected $allowedFields    = ['name_group', 'info_group'];
     protected $useTimestamps    = true;
+    protected $useSoftDeletes   = true;
 }

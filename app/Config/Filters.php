@@ -68,6 +68,8 @@ class Filters extends BaseConfig
                 'home',
                 'acara',
                 'acara/*',
+                'groups',
+                'groups/*',
             ]
         ]
     ];

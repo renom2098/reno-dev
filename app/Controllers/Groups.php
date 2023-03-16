@@ -113,6 +113,10 @@ class Groups extends ResourcePresenter
      */
     public function delete($id = null)
     {
-        //
+        // cara 1 : panjang
+        // $this->model->where('id_group', $id)->delete();
+        // cara 2 : pendek
+        $this->model->delete($id);
+        return redirect()->to(site_url('groups'))->with('danger', 'data berhasil dihapus');
     }
 }

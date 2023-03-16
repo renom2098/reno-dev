@@ -61,8 +61,15 @@
       <div class="card">
         <div class="card-header">
           <!-- <h1>Hello Group!</h1> -->
-          <div>
-            <a href="<?= base_url('groups/new'); ?>" class="btn btn-primary">Tambah Data</a>
+          <div class="container">
+            <div class="row">
+              <div class="col align-self-start">
+                <a href="<?= base_url('groups/new'); ?>" class="btn btn-primary">Tambah Data</a>
+              </div>
+              <div class="float-right">
+                <a href="<?= base_url('groups/new'); ?>" class="btn btn-warning">Data Sampah</a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="card-body">
@@ -84,9 +91,8 @@
                 <td><?= $value->info_group; ?></td>
                 <td class="text-center">
                   <a href="<?= base_url('groups/edit/'.$value->id_group); ?>" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i></a>
-                  <form action="<?= site_url('groups/'.$value->id_group); ?>" method="post" class="d-inline" onsubmit="return confirm('yakin mau menghapus??')">
+                  <form action="<?= site_url('groups/delete/'.$value->id_group); ?>" method="post" class="d-inline" onsubmit="return confirm('yakin mau menghapus??')">
                   <?php echo csrf_field(); ?>
-                  <input type="hidden" name="_method" value="DELETE">
                     <button class="btn btn-danger btn-sm">
                       <i class="fas fa-trash-alt"></i>
                     </button>
