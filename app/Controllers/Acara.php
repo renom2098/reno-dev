@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 class Acara extends BaseController
 {
-    public function __construct()
+    function __construct()
     {
         $this->db = \Config\Database::connect();
     }

@@ -26,7 +26,7 @@
     <!-- Main content -->
     <section class="content">
 
-    <!-- <?php if(session()->getFlashdata('success')) : ?>
+    <?php if(session()->getFlashdata('success')) : ?>
       <div class="alert alert-success alert-dismissible show fade">
         <div class="alert-body">
           <button class="close" data-dismiss="alert">X</button>
@@ -54,7 +54,7 @@
           <?= session()->getFlashdata('error') ?>
         </div>
       </div>
-    <?php endif; ?> -->
+    <?php endif; ?>
     
 
       <!-- Default box -->
@@ -62,7 +62,7 @@
         <div class="card-header">
           <!-- <h1>Hello Group!</h1> -->
           <div>
-            <a href="<?= base_url('groups/add'); ?>" class="btn btn-primary">Tambah Data</a>
+            <a href="<?= base_url('groups/new'); ?>" class="btn btn-primary">Tambah Data</a>
           </div>
         </div>
         <div class="card-body">
