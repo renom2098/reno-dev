@@ -10,5 +10,5 @@ class M_Groups extends Model
     protected $primaryKey       = 'id_group';
     protected $returnType       = 'object';
     protected $allowedFields    = ['name_group', 'info_group'];
-    protected $useTimeStamps    = true;
+    protected $useTimestamps    = true;
 }

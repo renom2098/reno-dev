@@ -68,7 +68,13 @@ class Groups extends ResourcePresenter
      */
     public function edit($id = null)
     {
-        return view('group/edit');
+        $group =  $this->model->where('id_group', $id)->first();
+        if (is_object($group)) {
+            $data['groups'] = $group;
+            return view('group/edit', $data);
+        } else {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+        }
     }
 
     /**
@@ -81,7 +87,9 @@ class Groups extends ResourcePresenter
      */
     public function update($id = null)
     {
-        //
+        $data = $this->request->getPost();
+        $this->model->update($id, $data);
+        return redirect()->to(site_url('groups'))->with('success', 'data berhasil diubah');
     }
 
     /**
