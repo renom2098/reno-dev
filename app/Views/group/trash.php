@@ -69,7 +69,7 @@
               <div class="float-right">
                 <a href="<?= base_url('groups/restore'); ?>" class="btn btn-info">Restore All</a>
                 <form action="<?= base_url('groups/delete2'); ?>" method="post" class="d-inline" onsubmit="return confirm('yakin mau menghapus permanen??')">
-                  <?php echo csrf_field(); ?>
+                  <?= csrf_field(); ?>
                     <button class="btn btn-danger btn-sm">Delete All</button>
                   </form>
               </div>
@@ -96,7 +96,7 @@
                 <td class="text-center">
                   <a href="<?= base_url('groups/restore/'.$value->id_group); ?>" class="btn btn-info btn-sm">Restore</a>
                   <form action="<?= base_url('groups/delete2/'.$value->id_group); ?>" method="post" class="d-inline" onsubmit="return confirm('yakin mau menghapus permanen??')">
-                  <?php echo csrf_field(); ?>
+                  <?= csrf_field(); ?>
                     <button class="btn btn-danger btn-sm">Delete Permanently</button>
                   </form>
                 </td>
