@@ -1,0 +1,320 @@
+ERROR - 2023-03-20 14:35:50 --> mysqli_sql_exception: Table 'devci4.group' doesn't exist in D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `group` ...', 0)
+#1 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `group` ...')
+#2 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `group` ...')
+#3 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `group` ...', Array, false)
+#4 D:\Dev\codeigniter4\reno-dev\app\Controllers\Groups.php(133): CodeIgniter\Database\BaseBuilder->update(NULL)
+#5 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Groups->restore('12')
+#6 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+#7 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Dev\codeigniter4\reno-dev\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Dev\\codeigni...')
+#10 {main}
+CRITICAL - 2023-03-20 14:35:50 --> Table 'devci4.group' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `group` SET `field` = :field:
+WHERE `id_group` = :id_group:', [...], false)
+ 2 APPPATH\Controllers\Groups.php(133): CodeIgniter\Database\BaseBuilder->update(null)
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Groups->restore('12')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-20 14:36:18 --> mysqli_sql_exception: Unknown column 'field' in 'field list' in D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `groups`...', 0)
+#1 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `groups`...')
+#2 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `groups`...')
+#3 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `groups`...', Array, false)
+#4 D:\Dev\codeigniter4\reno-dev\app\Controllers\Groups.php(133): CodeIgniter\Database\BaseBuilder->update(NULL)
+#5 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Groups->restore('12')
+#6 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+#7 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Dev\codeigniter4\reno-dev\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Dev\\codeigni...')
+#10 {main}
+CRITICAL - 2023-03-20 14:36:18 --> Unknown column 'field' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `groups` SET `field` = :field:
+WHERE `id_group` = :id_group:', [...], false)
+ 2 APPPATH\Controllers\Groups.php(133): CodeIgniter\Database\BaseBuilder->update(null)
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Groups->restore('12')
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-20 14:46:02 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':2:' at line 4 in D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `groups`...', 0)
+#1 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `groups`...')
+#2 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `groups`...')
+#3 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `groups`...', Array, false)
+#4 D:\Dev\codeigniter4\reno-dev\app\Controllers\Groups.php(135): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Groups->restore()
+#6 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+#7 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Dev\codeigniter4\reno-dev\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Dev\\codeigni...')
+#10 {main}
+CRITICAL - 2023-03-20 14:46:02 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':2:' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `groups` SET `deleted_at` = :deleted_at:
+WHERE 0 = :0:
+AND 1 IS NULL
+AND 2 = :2:', [...], false)
+ 2 APPPATH\Controllers\Groups.php(135): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Groups->restore()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-20 14:46:08 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':2:' at line 4 in D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `groups`...', 0)
+#1 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `groups`...')
+#2 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `groups`...')
+#3 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `groups`...', Array, false)
+#4 D:\Dev\codeigniter4\reno-dev\app\Controllers\Groups.php(135): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Groups->restore()
+#6 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+#7 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Dev\codeigniter4\reno-dev\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Dev\\codeigni...')
+#10 {main}
+CRITICAL - 2023-03-20 14:46:08 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':2:' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `groups` SET `deleted_at` = :deleted_at:
+WHERE 0 = :0:
+AND 1 IS NULL
+AND 2 = :2:', [...], false)
+ 2 APPPATH\Controllers\Groups.php(135): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Groups->restore()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-20 14:46:29 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':2:' at line 4 in D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `groups`...', 0)
+#1 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `groups`...')
+#2 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `groups`...')
+#3 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `groups`...', Array, false)
+#4 D:\Dev\codeigniter4\reno-dev\app\Controllers\Groups.php(135): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Groups->restore()
+#6 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+#7 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Dev\codeigniter4\reno-dev\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Dev\\codeigni...')
+#10 {main}
+CRITICAL - 2023-03-20 14:46:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':2:' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `groups` SET `deleted_at` = :deleted_at:
+WHERE 0 = :0:
+AND 1 IS NULL
+AND 2 = :2:', [...], false)
+ 2 APPPATH\Controllers\Groups.php(135): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Groups->restore()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-20 14:48:46 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':2:' at line 4 in D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `groups`...', 0)
+#1 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `groups`...')
+#2 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `groups`...')
+#3 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `groups`...', Array, false)
+#4 D:\Dev\codeigniter4\reno-dev\app\Controllers\Groups.php(141): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Groups->restore()
+#6 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+#7 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Dev\codeigniter4\reno-dev\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Dev\\codeigni...')
+#10 {main}
+CRITICAL - 2023-03-20 14:48:46 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':2:' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `groups` SET `deleted_at` = :deleted_at:
+WHERE 0 = :0:
+AND 1 IS NULL
+AND 2 = :2:', [...], false)
+ 2 APPPATH\Controllers\Groups.php(141): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Groups->restore()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-20 14:49:11 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':2:' at line 4 in D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `groups`...', 0)
+#1 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `groups`...')
+#2 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `groups`...')
+#3 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `groups`...', Array, false)
+#4 D:\Dev\codeigniter4\reno-dev\app\Controllers\Groups.php(141): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Groups->restore()
+#6 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+#7 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Dev\codeigniter4\reno-dev\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Dev\\codeigni...')
+#10 {main}
+CRITICAL - 2023-03-20 14:49:11 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':2:' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `groups` SET `deleted_at` = :deleted_at:
+WHERE 0 = :0:
+AND 1 IS NULL
+AND 2 = :2:', [...], false)
+ 2 APPPATH\Controllers\Groups.php(141): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Groups->restore()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-20 14:49:36 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':2:' at line 4 in D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `groups`...', 0)
+#1 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `groups`...')
+#2 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `groups`...')
+#3 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `groups`...', Array, false)
+#4 D:\Dev\codeigniter4\reno-dev\app\Controllers\Groups.php(142): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Groups->restore()
+#6 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+#7 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Dev\codeigniter4\reno-dev\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Dev\\codeigni...')
+#10 {main}
+CRITICAL - 2023-03-20 14:49:36 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':2:' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `groups` SET `deleted_at` = :deleted_at:
+WHERE 0 = :0:
+AND 1 IS NULL
+AND 2 = :2:', [...], false)
+ 2 APPPATH\Controllers\Groups.php(142): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Groups->restore()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-20 14:49:39 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':2:' at line 4 in D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `groups`...', 0)
+#1 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `groups`...')
+#2 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `groups`...')
+#3 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `groups`...', Array, false)
+#4 D:\Dev\codeigniter4\reno-dev\app\Controllers\Groups.php(142): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Groups->restore()
+#6 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+#7 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Dev\codeigniter4\reno-dev\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Dev\\codeigni...')
+#10 {main}
+CRITICAL - 2023-03-20 14:49:39 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':2:' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `groups` SET `deleted_at` = :deleted_at:
+WHERE 0 = :0:
+AND 1 IS NULL
+AND 2 = :2:', [...], false)
+ 2 APPPATH\Controllers\Groups.php(142): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Groups->restore()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-20 14:49:48 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':2:' at line 4 in D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `groups`...', 0)
+#1 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `groups`...')
+#2 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `groups`...')
+#3 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `groups`...', Array, false)
+#4 D:\Dev\codeigniter4\reno-dev\app\Controllers\Groups.php(142): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Groups->restore()
+#6 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+#7 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Dev\codeigniter4\reno-dev\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Dev\\codeigni...')
+#10 {main}
+CRITICAL - 2023-03-20 14:49:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':2:' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `groups` SET `deleted_at` = :deleted_at:
+WHERE 0 = :0:
+AND 1 IS NULL
+AND 2 = :2:', [...], false)
+ 2 APPPATH\Controllers\Groups.php(142): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Groups->restore()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-20 14:50:47 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':2:' at line 4 in D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `groups`...', 0)
+#1 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `groups`...')
+#2 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `groups`...')
+#3 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `groups`...', Array, false)
+#4 D:\Dev\codeigniter4\reno-dev\app\Controllers\Groups.php(142): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Groups->restore()
+#6 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+#7 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Dev\codeigniter4\reno-dev\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Dev\\codeigni...')
+#10 {main}
+CRITICAL - 2023-03-20 14:50:47 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':2:' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `groups` SET `deleted_at` = :deleted_at:
+WHERE 0 = :0:
+AND 1 IS NULL
+AND 2 = :2:', [...], false)
+ 2 APPPATH\Controllers\Groups.php(142): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Groups->restore()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-03-20 14:50:54 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':2:' at line 4 in D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `groups`...', 0)
+#1 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `groups`...')
+#2 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `groups`...')
+#3 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `groups`...', Array, false)
+#4 D:\Dev\codeigniter4\reno-dev\app\Controllers\Groups.php(142): CodeIgniter\Database\BaseBuilder->update()
+#5 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Groups->restore()
+#6 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+#7 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Dev\codeigniter4\reno-dev\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Dev\\codeigni...')
+#10 {main}
+CRITICAL - 2023-03-20 14:50:54 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':2:' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `groups` SET `deleted_at` = :deleted_at:
+WHERE 0 = :0:
+AND 1 IS NULL
+AND 2 = :2:', [...], false)
+ 2 APPPATH\Controllers\Groups.php(142): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Groups->restore()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-20 15:11:40 --> Call to undefined method App\Models\M_Groups::purgeDelete
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Groups.php(154): CodeIgniter\Model->__call('purgeDelete', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Groups->delete2()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-20 15:12:02 --> Call to undefined method App\Models\M_Groups::purgeDelete
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Groups.php(154): CodeIgniter\Model->__call('purgeDelete', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Groups->delete2()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-20 15:15:13 --> Call to undefined method App\Models\M_Groups::purgeDelete
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Groups.php(154): CodeIgniter\Model->__call('purgeDelete', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Groups->delete2()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

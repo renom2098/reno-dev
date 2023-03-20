@@ -119,4 +119,40 @@ class Groups extends ResourcePresenter
         $this->model->delete($id);
         return redirect()->to(site_url('groups'))->with('danger', 'data berhasil dihapus');
     }
+
+    public function trash()
+    {
+        $data['groups'] = $this->model->onlyDeleted()->findAll();
+        return view('group/trash', $data);
+    }
+
+    public function restore($id = null)
+    {
+        if ($id != null) {
+            // $this->model->update($id, ['deleted_at' => null]);
+            $this->db->table('groups')
+            ->set('deleted_at', null, true)
+            ->where(['id_group' => $id])
+            ->update();
+        } else {
+            $this->db->table('groups')
+            ->set('deleted_at', null, true)
+            ->where('deleted_at is NOT NULL', NULL, FALSE)
+            ->update();
+        }
+        if ($this->db->affectedRows() > 0) {
+            return redirect()->to(site_url('groups'))->with('success', 'data berhasil direstore');
+        }
+    }
+
+    public function delete2($id = null)
+    {
+        if ($id != null) {
+            $this->model->delete($id, true);
+            return redirect()->to(site_url('groups/trash'))->with('danger', 'data sampah berhasil dihapus permanen');
+        } else {
+            $this->model->purgeDeleted();
+            return redirect()->to(site_url('groups/trash'))->with('danger', 'data sampah berhasil dihapus permanen');
+        }
+    }
 }

@@ -10,12 +10,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Data Group Kontak</h1>
+            <h1>Data Group Kontak - Trash</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item">Group</a></li>
-              <li class="breadcrumb-item active">Group Kontak</li>
+              <li class="breadcrumb-item active">Sampah Group Kontak</li>
             </ol>
           </div>
         </div>
@@ -64,10 +64,14 @@
           <div class="container">
             <div class="row">
               <div class="col align-self-start">
-                <a href="<?= base_url('groups/new'); ?>" class="btn btn-primary">Tambah Data</a>
+                <a href="<?= base_url('groups'); ?>" class="btn btn-primary">Back</a>
               </div>
               <div class="float-right">
-                <a href="<?= base_url('groups/trash'); ?>" class="btn btn-warning">Data Sampah</a>
+                <a href="<?= base_url('groups/restore'); ?>" class="btn btn-info">Restore All</a>
+                <form action="<?= base_url('groups/delete2'); ?>" method="post" class="d-inline" onsubmit="return confirm('yakin mau menghapus permanen??')">
+                  <?php echo csrf_field(); ?>
+                    <button class="btn btn-danger btn-sm">Delete All</button>
+                  </form>
               </div>
             </div>
           </div>
@@ -90,12 +94,10 @@
                 <td><?= $value->name_group; ?></td>
                 <td><?= $value->info_group; ?></td>
                 <td class="text-center">
-                  <a href="<?= base_url('groups/edit/'.$value->id_group); ?>" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i></a>
-                  <form action="<?= site_url('groups/delete/'.$value->id_group); ?>" method="post" class="d-inline" onsubmit="return confirm('yakin mau menghapus??')">
+                  <a href="<?= base_url('groups/restore/'.$value->id_group); ?>" class="btn btn-info btn-sm">Restore</a>
+                  <form action="<?= base_url('groups/delete2/'.$value->id_group); ?>" method="post" class="d-inline" onsubmit="return confirm('yakin mau menghapus permanen??')">
                   <?php echo csrf_field(); ?>
-                    <button class="btn btn-danger btn-sm">
-                      <i class="fas fa-trash-alt"></i>
-                    </button>
+                    <button class="btn btn-danger btn-sm">Delete Permanently</button>
                   </form>
                 </td>
               </tr>
