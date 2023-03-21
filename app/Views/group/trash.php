@@ -67,7 +67,7 @@
                 <a href="<?= base_url('groups'); ?>" class="btn btn-primary">Back</a>
               </div>
               <div class="float-right">
-                <a href="<?= base_url('groups/restore'); ?>" class="btn btn-info">Restore All</a>
+                <a href="<?= base_url('groups/restore'); ?>" class="btn btn-info btn-sm">Restore All</a>
                 <form action="<?= base_url('groups/delete2'); ?>" method="post" class="d-inline" onsubmit="return confirm('yakin mau menghapus permanen??')">
                   <?= csrf_field(); ?>
                     <button class="btn btn-danger btn-sm">Delete All</button>

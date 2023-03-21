@@ -56,8 +56,8 @@ $routes->delete('acara/(:segment)', 'Acara::destroy/$1');
 $routes->get('groups/trash', 'Groups::trash');
 $routes->get('groups/restore/(:any)', 'Groups::restore/$1');
 $routes->get('groups/restore', 'Groups::restore');
-$routes->delete('groups/delete2/(:any)', 'Groups::delete2/$1');
-$routes->delete('groups/delete2', 'Groups::delete2');
+$routes->post('groups/delete2/(:any)', 'Groups::delete2/$1');
+$routes->post('groups/delete2', 'Groups::delete2');
 $routes->presenter('groups');
 
 
