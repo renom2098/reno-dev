@@ -53,6 +53,10 @@
           </a>
           <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="left: inherit; right: 0px;">
             <div class="dropdown-divider"></div>
+            <p class="dropdown-item">
+              Reno
+            </p>
+            <div class="dropdown-divider"></div>
             <a href="<?= site_url('logout'); ?>" class="dropdown-item">
               <i class="fas fa-sign-out-alt mr-2"></i> Logout
             </a>
