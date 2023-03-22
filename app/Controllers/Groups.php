@@ -8,6 +8,7 @@ use CodeIgniter\RESTful\ResourcePresenter;
 class Groups extends ResourcePresenter
 {
     protected $modelName  = 'App\Models\M_groups';
+    // protected $helpers = ['custom'];
 
     function __construct()
     {

@@ -54,7 +54,7 @@
           <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="left: inherit; right: 0px;">
             <div class="dropdown-divider"></div>
             <p class="dropdown-item">
-              Reno
+              Hi, <?= userLogin()->name_user; ?>
             </p>
             <div class="dropdown-divider"></div>
             <a href="<?= site_url('logout'); ?>" class="dropdown-item">

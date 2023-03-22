@@ -31,10 +31,10 @@
           <h1>Hello World!</h1>
         </div>
         <div class="card-body">
-          <h1>ini body</h1>
+          <h1>Hi, <?= userLogin()->name_user; ?></h1>
         </div>
         <div class="card-footer">
-          <h1>ini footer</h1>
+          <h1>Footer body</h1>
         </div>
       </div>
       <!-- /.card -->
