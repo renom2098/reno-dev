@@ -3,7 +3,7 @@
        with font-awesome or any other icon font library -->
   <li class="nav-header">Main Menu</li>
   <li class="nav-item">
-    <a href="<?= base_url(); ?>" class="nav-link">
+    <a href="<?= base_url('home'); ?>" class="nav-link">
       <i class="nav-icon fas fa-tachometer-alt"></i>
       <p>
         Dashboard
@@ -12,7 +12,7 @@
   </li>
 
   <li class="nav-item">
-    <a href="<?= base_url(); ?>acara" class="nav-link">
+    <a href="<?= base_url('acara'); ?>" class="nav-link">
       <i class="nav-icon fas fa-calendar-alt"></i>
       <p>
         Acara
@@ -21,7 +21,7 @@
   </li>
 
   <li class="nav-item">
-    <a href="<?= base_url(); ?>" class="nav-link">
+    <a href="#" class="nav-link">
       <i class="nav-icon fas fa-address-book"></i>
       <p>
         Kontak
@@ -38,7 +38,7 @@
     </ul>
     <ul class="nav nav-treeview">
       <li class="nav-item">
-        <a href="<?= base_url(); ?>" class="nav-link">
+        <a href="<?= base_url('kontak'); ?>" class="nav-link">
           <i class="far fa-circle nav-icon"></i>
           <p>Kontak Saya</p>
         </a>
@@ -47,7 +47,7 @@
   </li>
 
   <li class="nav-item">
-    <a href="<?= base_url(); ?>" class="nav-link">
+    <a href="#" class="nav-link">
       <i class="nav-icon fas fa-envelope"></i>
       <p>
         Undangan
@@ -56,7 +56,7 @@
     </a>
     <ul class="nav nav-treeview">
       <li class="nav-item">
-        <a href="<?= base_url(); ?>" class="nav-link">
+        <a href="<?= base_url('mengundang'); ?>" class="nav-link">
           <i class="far fa-circle nav-icon"></i>
           <p>Saya Mengundang</p>
         </a>
@@ -64,7 +64,7 @@
     </ul>
     <ul class="nav nav-treeview">
       <li class="nav-item">
-        <a href="<?= base_url(); ?>" class="nav-link">
+        <a href="<?= base_url('diundang'); ?>" class="nav-link">
           <i class="far fa-circle nav-icon"></i>
           <p>Saya Diundang</p>
         </a>

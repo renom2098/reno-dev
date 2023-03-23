@@ -137,5 +137,7 @@
 <!-- <script src="<?= base_url(); ?>template/dist/js/demo.js"></script> -->
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="<?= base_url(); ?>template/dist/js/pages/dashboard.js"></script>
+<!-- js buatan custom -->
+<script src="<?= base_url(); ?>template/custom/js/custom.js"></script>
 </body>
 </html>
