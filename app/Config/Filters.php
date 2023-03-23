@@ -70,6 +70,8 @@ class Filters extends BaseConfig
                 'acara/*',
                 'groups',
                 'groups/*',
+                'contacts',
+                'contacts/*',
             ]
         ]
     ];

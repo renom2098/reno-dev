@@ -60,6 +60,9 @@ $routes->post('groups/delete2/(:any)', 'Groups::delete2/$1');
 $routes->post('groups/delete2', 'Groups::delete2');
 $routes->presenter('groups');
 
+// kontak
+$routes->presenter('contacts');
+
 
 /*
  * --------------------------------------------------------------------
