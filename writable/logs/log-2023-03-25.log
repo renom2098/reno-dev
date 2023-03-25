@@ -1,0 +1,13 @@
+ERROR - 2023-03-25 21:20:30 --> mysqli_sql_exception: Unknown column 'name_contact' in 'field list' in E:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 E:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 E:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 E:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 E:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 E:\Dev\codeigniter4\reno-dev\app\Database\Seeds\ContactSeeder.php(18): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Database\Seeder.php(146): App\Database\Seeds\ContactSeeder->run()
+#6 E:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\Commands\Database\Seed.php(77): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#7 E:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Seed->run(Array)
+#8 E:\Dev\codeigniter4\reno-dev\vendor\codeigniter4\framework\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#9 E:\Dev\codeigniter4\reno-dev\spark(97): CodeIgniter\CLI\Console->run()
+#10 {main}
