@@ -81,13 +81,34 @@
               <th style="width: 10px">Alias</th>
               <th style="width: 10px">Telepon</th>
               <th style="width: 10px">Email</th>
+              <th style="width: 50px">Alamat</th>
               <th style="width: 10px">Info</th>
               <th style="width: 10px">Group</th>
               <th style="width: 40px">Action</th>
             </tr>
           </thead>
           <tbody>
-            <!-- foreach disini -->
+            <?php foreach ($contacts as $c => $value) : ?>
+              <tr>
+                <td><?= $c + 1; ?></td>
+                <td><?= $value->name_contact; ?></td>
+                <td><?= $value->name_alias; ?></td>
+                <td><?= $value->phone; ?></td>
+                <td><?= $value->email; ?></td>
+                <td><?= $value->address; ?></td>
+                <td><?= $value->info_contact; ?></td>
+                <td><?= $value->name_group; ?></td>
+                <td class="text-center">
+                  <a href="<?= base_url('contacts/edit/'.$value->id_contact); ?>" class="btn btn-warning btn-sm"><i class="fas fa-pencil-alt"></i></a>
+                  <form action="<?= site_url('contacts/delete/'.$value->id_contact); ?>" method="post" class="d-inline" onsubmit="return confirm('yakin mau menghapus??')">
+                  <?php echo csrf_field(); ?>
+                    <button class="btn btn-danger btn-sm">
+                      <i class="fas fa-trash-alt"></i>
+                    </button>
+                  </form>
+                </td>
+              </tr>
+            <?php endforeach; ?>
           </tbody>
         </table>
         </div>

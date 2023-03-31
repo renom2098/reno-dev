@@ -16,7 +16,8 @@ class M_Contacts extends Model
     function getAll()
     {
         $builder = $this->db->table('contacts');
-        $builder->join('groups', 'groups.id_group = groups.id_group');
+        $builder->join('groups', 'groups.id_group = contacts.id_group');
         $query = $builder->get();
+        return $query->getResult();
     }
 }

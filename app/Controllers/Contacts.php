@@ -21,7 +21,7 @@ class Contacts extends ResourceController
      */
     public function index()
     {
-        $data['contacts'] = $this->contact->findAll();
+        $data['contacts'] = $this->contact->getAll();
         return view('contact/index', $data);
     }
 
