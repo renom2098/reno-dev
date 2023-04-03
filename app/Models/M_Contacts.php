@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class M_Contacts extends Model
 {
-    protected $table            = 'contact';
+    protected $table            = 'contacts';
     protected $primaryKey       = 'id_contact';
     protected $returnType       = 'object';
     protected $allowedFields    = ['name_contact', 'name_alias', 'phone', 'email', 'address', 'info_contact', 'id_group'];

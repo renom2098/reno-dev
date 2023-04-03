@@ -34,18 +34,44 @@
           </div>
         </div>
         <div class="card-body col-md-6">
-            <form action="<?= site_url('contacts/update/'); ?>" method="post" autocomplete="off">
+            <form action="<?= site_url('contacts/update/'.$contacts->id_contact); ?>" method="post" autocomplete="off">
             <?php echo csrf_field(); ?>
+            <div class="form-group">
+                <label>Group*</label>
+                  <select name="id_group" class="form-control" required>
+                  <option value="" hidden></option>
+                  <?php foreach ($groups as $key => $value) : ?>
+                    <option value="<?= $value->id_group; ?>" <?= $contacts->id_group == $value->id_group ? 'selected' : null ?>>
+                    <?= $value->name_group; ?></option>
+                  <?php endforeach; ?>
+                  </select>
+                </div>
                 <div class="form-group">
                     <label>Nama Kontak*</label>
-                    <input type="text" name="name_group" class="form-control" value="" require>
+                    <input type="text" name="name_contact" class="form-control" value="<?= $contacts->name_contact; ?>" required>
                 </div>
                 <div class="form-group">
-                    <label>Info Kontak</label>
-                    <textarea name="info_group" class="form-control" cols="30" rows="10"></textarea>
+                    <label>Nama Alias</label>
+                    <input type="text" name="name_alias" value="<?= $contacts->name_alias; ?>" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Telepon</label>
+                    <input type="number" name="phone" value="<?= $contacts->phone; ?>" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" value="<?= $contacts->email; ?>" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Alamat</label>
+                    <textarea name="address" class="form-control" cols="20" rows="10"><?= $contacts->address; ?></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Info (kota / instansi / dll)</label>
+                    <textarea name="info_contact" class="form-control" cols="20" rows="10"><?= $contacts->info_contact; ?></textarea>
                 </div>
                 <div>
-                    <button type="submit" class="btn btn-success"><i class="fas fa-paper-plane"></i> Update</button>
+                    <button type="submit" class="btn btn-success"><i class="fas fa-paper-plane"></i> Tambah</button>
                     <button type="reset" class="btn btn-secondary"><i class="fas fa-sync-alt"></i> Reset</button>
                 </div>
             </form>
