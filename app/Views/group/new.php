@@ -34,11 +34,15 @@
           </div>
         </div>
         <div class="card-body col-md-6">
+            <?php $validation = \Config\Services::validation(); ?>
             <form action="<?= site_url('groups'); ?>" method="post" autocomplete="off">
             <?php echo csrf_field(); ?>
                 <div class="form-group">
                     <label>Nama Group*</label>
-                    <input type="text" name="name_group" class="form-control" require>
+                    <input type="text" name="name_group" value="<?= old('name_group'); ?>" class="form-control <?= $validation->hasError('name_group') ? 'is-invalid' : null ?>">
+                    <div class="invalid-feedback">
+                      <?= $validation->getError('name_group'); ?>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label>Info Group</label>

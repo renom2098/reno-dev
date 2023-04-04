@@ -55,6 +55,21 @@ class Groups extends ResourcePresenter
      */
     public function create()
     {
+        $validate = $this->validate([
+            'name_group'    => [
+                'rules'     => 'required|min_length[3]',
+                'errors'    => [
+                    'required' => 'Nama group tidak boleh kosong!',
+                    'min_length' => 'Nama group minimal 3 huruf!',
+                ],
+            ],
+        ]);
+        if(!$validate) {
+            // return redirect()->back()->withInput();
+            return view('group/new');
+            // return redirect()->to(site_url('groups/new'));
+        }
+        
         $data = $this->request->getPost();
         $this->model->insert($data);
         return redirect()->to(site_url('groups'))->with('success', 'data berhasil disimpan');
@@ -88,6 +103,21 @@ class Groups extends ResourcePresenter
      */
     public function update($id = null)
     {
+        $validate = $this->validate([
+            'name_group'    => [
+                'rules'     => 'required|min_length[3]',
+                'errors'    => [
+                    'required' => 'Nama group tidak boleh kosong!',
+                    'min_length' => 'Nama group minimal 3 huruf!',
+                ],
+            ],
+        ]);
+        if(!$validate) {
+            // return redirect()->back()->withInput();
+            return view('group/edit');
+            // return redirect()->to(site_url('groups/new'));
+        }
+
         $data = $this->request->getPost();
         $this->model->update($id, $data);
         return redirect()->to(site_url('groups'))->with('success', 'data berhasil diubah');
